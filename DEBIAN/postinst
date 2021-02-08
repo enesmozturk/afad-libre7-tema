@@ -1,13 +1,15 @@
+#!/bin/bash
 ############tema yükleme#######
-mv /opt/libreoffice7.0/share/config/images_elementary.zip /opt/libreoffice7.0/share/config/images_elementary_2.zip
-cp /opt/libreoffice7.0/share/config/images_office2013.zip /opt/libreoffice7.0/share/config/images_elementary.zip
+#mv /opt/libreoffice7.0/share/config/images_elementary.zip /opt/libreoffice7.0/share/config/images_elementary_2.zip
+#cp /opt/libreoffice7.0/share/config/images_office2013.zip /opt/libreoffice7.0/share/config/images_elementary.zip
 #######Varsayılan tema profillerini silme#########
 rm -r /etc/skel/.config/libreoffice
 ######Hazırlanana libre7 teması yükleme#######
 cd /tmp/afad-libre7-tema
-cp -r intro.png /opt/libreoffice7.0/program/
-cp -r sofficerc /opt/libreoffice7.0/program/
-cp -r shell /opt/libreoffice7.0/program/
+cp /tmp/afad-libre7-tema/images_office2013.zip /opt/libreoffice7*/share/config/
+cp -r intro.png /opt/libreoffice7*/program/
+cp -r sofficerc /opt/libreoffice7*/program/
+cp -r shell /opt/libreoffice7*/program/
 tar -xzf libreoffice.tar.gz
 mkdir -p /etc/skel/.config
 cp -r libreoffice /etc/skel/.config/
