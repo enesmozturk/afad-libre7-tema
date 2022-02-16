@@ -5,16 +5,16 @@
 #######Varsayılan tema profillerini silme#########
 rm -r /etc/skel/.config/libreoffice
 ######Hazırlanana libre7 teması yükleme#######
-cd /tmp/afad-libre7-tema
-cp /tmp/afad-libre7-tema/images_office2013.zip /opt/libreoffice7*/share/config/
+cd /opt/afad-libre7-tema
+cp /opt/afad-libre7-tema/images_office2013.zip /opt/libreoffice7*/share/config/
 cp -r intro.png /opt/libreoffice7*/program/
 cp -r sofficerc /opt/libreoffice7*/program/
 cp -r shell /opt/libreoffice7*/program/
 tar -xzf libreoffice.tar.gz
 mkdir -p /etc/skel/.config
 cp -r libreoffice /etc/skel/.config/
-cd /tmp
-rm -r /tmp/afad-libre7-tema
+cd /opt
+#rm -r /opt/afad-libre7-tema
 #########var olan kullanıcılar için libre7 teması yükleme#######
 find /home -type d -name ".config" -exec rm -r "{}"/libreoffice \;
 find /home -type d -name ".config" -exec cp -r /etc/skel/.config/libreoffice "{}"/ \;
