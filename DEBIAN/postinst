@@ -13,6 +13,7 @@ cp -r shell /opt/libreoffice7*/program/
 tar -xzf libreoffice.tar.gz
 mkdir -p /etc/skel/.config
 cp -r libreoffice /etc/skel/.config/
+cp -r /opt/afad-libre7-tema/registrymodifications.xcu /etc/skel/.config/libreoffice/4/user/
 cd /opt
 #rm -r /opt/afad-libre7-tema
 #########var olan kullanıcılar için libre7 teması yükleme#######
